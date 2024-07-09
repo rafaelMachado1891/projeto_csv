@@ -2,7 +2,6 @@
 
 import csv
 
-caminho_do_arquivo = "arquivo.csv"
 
 def ler_arquivo_csv(nome_do_arquivo: str) -> list[dict]:
     # função para fazer a leitura de um arquivo csv
@@ -36,13 +35,5 @@ def somar_os_valores_da_lista(lista_dos_produtos_filtrados: list[dict]) -> float
        valor_total_dos_produtos += float(produtos.get("price"))
          
     return valor_total_dos_produtos
-
-
-
-produtos_csv = ler_arquivo_csv(caminho_do_arquivo)
-produtos_entregues = filtrar_produtos_entregues(produtos_csv)
-valor_total = somar_os_valores_da_lista(produtos_entregues)
-
-print(valor_total)
 
 
