@@ -14,4 +14,18 @@ def ler_arquivo_csv(nome_do_arquivo: str) -> list[dict]:
              lista.append(linha)                                                      
     return(lista)
 
-print(ler_arquivo_csv(caminho_do_arquivo))
+
+
+
+def filtrar_produtos_entregues(lista: list[dict]) -> list[dict]:
+    produtos_filtrados = []
+    for produtos in lista:
+        if produtos.get("entregue") == "True":
+         produtos_filtrados.append(produtos)
+    return produtos_filtrados
+
+produtos_csv = ler_arquivo_csv(caminho_do_arquivo)
+produtos_entregues = filtrar_produtos_entregues(produtos_csv)
+print(produtos_entregues)
+
+
