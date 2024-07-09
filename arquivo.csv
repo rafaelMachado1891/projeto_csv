@@ -1,4 +1,4 @@
-produto, price, entregue
-cadeira, 399.9, true
-mesa, 299.9 , false
-abajur, 119.90, true
+produto,price,entregue
+cadeira,399.9,True
+mesa,299.9 ,False
+abajur,119.90,True
